@@ -1,0 +1,46 @@
+ID: BUG01
+Bug Title: Bluetooth Pairing Fails with Near Field Connectivity (NFC) Enabled Devices
+Severity: High
+Description:
+When attempting to establish a Bluetooth connection between the UE Boom 2 speaker and NFC-enabled devices (e.g., iPhone SE 2, Samsung S8) by holding the device next to the (+)(-) buttons of the speaker, as it is provided in documentation* the pairing process fails to initiate automatically. Despite multiple attempts with different devices and troubleshooting steps (e.g., forgetting the device via settings, power cycling both devices), the issue persists. This failure to establish a Bluetooth connection via NFC significantly impacts the user experience and renders the NFC pairing feature unusable.
+*see pg. 7 UE BOOM documentation.pdf
+Steps to Reproduce:
+Ensure the UE Boom 2 speaker is turned on and not connected to any device.
+Enable Bluetooth on the NFC-enabled device (e.g., iPhone SE 2, Samsung S8).
+Hold the NFC-enabled device next to the (+)(-) buttons of the UE Boom 2 speaker.
+Observe that the Bluetooth pairing process does not initiate automatically.
+
+Expected result:
+When holding an NFC-enabled device next to the (+)(-) buttons of the UE Boom 2 speaker, the Bluetooth pairing process should initiate automatically, establishing a connection between the devices without requiring manual intervention.
+Additional Notes:
+This issue impacts the usability and convenience of the NFC pairing feature, especially for users expecting seamless device connectivity.
+
+
+ID: BUG02
+Bug Title: Alarm Fails to Play Audio if last played Audio File is Unavailable
+Severity: Medium
+Description:
+When the alarm function is activated on the UE Boom 2 speaker and the app, and set to play the last audio file as the alarm sound, the alarm fails to play any audio if the last played audio file becomes unavailable. Upon triggering the alarm, no audio is emitted from the speaker, resulting in the alarm not functioning as intended. 
+Steps to Reproduce:
+Ensure the UE Boom 2 speaker is connected to a device via Bluetooth.
+Activate the alarm function on the UE Boom 2 app and set it to play the last audio file as the alarm sound.
+Ensure the last played audio file is unavailable or removed from the connected device.
+Set the alarm time to trigger the alarm.
+
+Expected result:
+When the alarm is triggered, if the last played file is unavailable, alarm should play default alarm sound.
+Additional Notes:
+This issue affects the usability and reliability of the alarm feature on the UE Boom 2 speaker and requires immediate attention to ensure consistent functionality.
+
+
+
+
+For extra traceability I followed 3 main points:
+
+Test case naming. Clearly identifying the functionality and features being tested.
+Giving cases Test ID. I reference Test ID’s throughout my provided documentation.
+Cross referencing. I cross referenced UE BOOM provided documentation throughout my test case and test execution scenarios. 
+
+
+
+
