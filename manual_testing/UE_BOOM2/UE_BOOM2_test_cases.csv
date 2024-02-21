@@ -1,0 +1,69 @@
+"Test device: UE BOOM 2;  speaker firmware (v2.4.7)
+Software used to conduct tests: iOS (v17.2.1); app version (v7.15.146)";;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+ID;Test Description;Preconditions:;Step No.;Test Steps;Expected Results;Status;Found issues
+;;;;;;;
+T01;"Power On/Off functionality test
+
+To test that the UE Boom 2 speaker can be powered on and off using the companion app on an iPhone SE 2";"-The speaker is turned off.
+-Iphone SE 2 has UE Boom 2 app installed.
+-The device and phone are connected via bluetooth.";1.;Start up the UE BOOM app on the phone.;App loads up and connects to the UE BOOM 2 device.;PASS;
+;;;2.;Press power on/off control button in the app.;In 3 seconds LED indicator is ON and plays TURN ON sound cue.;;
+;;;3.;Press power on/off control button in the app.;in 3 seconds LED indicator is OFF and plays TURN OFF sound cue.;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+T02;"Bluetooth pairing test
+Verify successful Bluetooth pairing with the device";"-UE boom 2 device is turned on
+-Pairing mode is ON
+-Bluetooth is enabled on Iphone SE 2";1.;Enable Bluetooth pairing on the device by clicking raised button.;In 3 seconds LED indicator starts flashing and plays PAIRING MODE sound cue.;PASS;
+;;;;;;;
+;;;;;;;
+;;;2.;In iPhone Bluetooth settings click on “Connect” to UE BOOM 2 device;After connection is completed device plays a cue sound indicating that it connected to a device.;;
+;;;;;;;
+;;;3.;Play audio from iPhone to test connectivity;Audio plays successfully.;;
+;;;;;;;
+T03;"Volume control test
+Verify volume control functionality";"-The speaker is ON
+-Speaker is connected to a device via bluetooth";1.;Play audio from connected iPhone.;Audio plays successfully.;PASS;
+;;;2.;On the UE BOOM app use slider function to control Volume up and down;Sound changes swiftly according to slider movement on the app.;;
+;;;;;;;
+;;;3.;Use (+) button to increase volume on the actual speaker;Button reacts to click, volume increases gradually and plays sound cue when reaches MAX volume.;;
+;;;;;;;
+;;;;;;;
+;;;4.;Use (-) button to decrease volume on the actual speaker;Button reacts to click, volume decreases gradually until it’s MUTE.;;
+;;;;;;;
+;;;;;;;
+T04;"Custom function of buttons on the UE BOOM 2 device
+Verify different combinations of button functionality";"-The speaker is ON
+-Speaker is connected to a device -Audio is playing through the speaker
+-Tap controls enabled";1. ;Press (+) and (-) buttons simultaneously;Audio decreases in volume and audio cue in current set language tells how much battery power is left in percentages. *See UE BOOM doc. pg. 5.;PASS;BUG01: Double TAP function is not consistent. The speaker sometimes does not recognise when it is a single and a double tap. When double tapped when PAUSE is enabled. Sometimes it skips to the next audio on the list  or continues playing current audio.
+;;;;;;;
+;;;2.;Double click bluetooth connectivity button;Audio stops playing and Siri function is enabled on the Iphone. Audio is still played via speaker.;;
+;;;;;;;
+;;;3.;Hold the speaker in hand and double tap the top to skip a song from currently playing Playlist.;Two swift taps skips to next song from the Playlist. *See UE BOOM doc pg. 1;;
+;;;;;;;
+;;;;;;;
+;;;4.;Hold the speaker in hand and single tap to PAUSE/UNPAUSE current audio.;Single tap pauses and unpauses audio.  *See UE BOOM doc pg. 1;;
+;;;;;;;
+;;;;;;;
+T05;"NFC enabled pairing with iPhone SE 2
+Verify bluetooth connection of UE BOOM 2 and iPhone SE 2 by holding a phone next to (+)(-) buttons of the speaker";"-Iphone has bluetooth enabled
+-The speaker is ON and not connected to a device";1.;Place iPhone next to (+)(-) buttons of the speaker;After 3 seconds iPhone is connected to the speaker via Bluetooth. *See UE BOOM doc pg. 7;FAIL;NFC enabled iPhone does not connect automatically to the UE BOOM 2 speaker. Forgetting device via settings did not fix the issue. Turning both devices OFF and ON and resetting settings did not resolve the issue. Issue still exist when tried with another phone (SAMSUNG S8). 
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+;;;;;;;
+T06;"Alarm function of the app and UE BOOM 2 device
+Verify functionality of alarm and audio played during activation";-iPhone connected to the speaker via bluetooth;1.;Go to the settings section in the app and set Alarm ON;Alarm ON;FAIL;BUG03: If the last played audio file is made unavailable the Alarm does not function. It does not play any audio and fails to perform.
+;;;;;;;
+;;;2.;Set alarm at 11:11h and select to play last audio as alarm.;The speaker starts to play audio at 11:11h with increasing volume. Until turned OFF.;;
+;;;;;;;
+;;;;;;;
