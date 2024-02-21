@@ -1,0 +1,202 @@
+Test Case Name: Power On/Off functionality test
+Test Case ID: T01
+Tested Device: UE Boom 2 | speaker v2.4.7
+Testing Device: iPhone SE 2 | v17.2.1
+Mobile App: UE | BOOM | v7.15.146
+Test Date: 21/02/2024
+
+
+Test Results:
+Execution Status: PASS
+
+Observations:
+
+The UE Boom 2 speaker was turned off initially.
+The iPhone SE 2 had the UE Boom 2 app installed and was connected to the speaker via Bluetooth.
+The UE Boom 2 app was launched successfully on the iPhone SE 2.
+The app detected the presence of the UE Boom 2 speaker and established a Bluetooth connection.
+The power control within the app interface was located and tapped to power on the UE Boom 2 speaker.
+LED indicators on the speaker confirmed successful power-on.
+The power control within the app interface was tapped again to power off the UE Boom 2 speaker.
+LED indicators on the speaker confirmed successful power-off.
+
+Conclusion:
+The test case for the Power On/Off functionality of the UE Boom 2 speaker using the app on an iPhone SE 2 was executed successfully.
+
+
+
+
+Test Case Name: Bluetooth pairing test
+Test Case ID: T02
+Tested Device: UE Boom 2 | speaker v2.4.7
+Testing Device: iPhone SE 2 | v17.2.1
+Mobile App: UE | BOOM | v7.15.146
+Test Date: 21/02/2024
+
+
+Test Results:
+Execution Status: PASS
+
+Observations:
+
+The UE Boom 2 device was turned on, and pairing mode was activated.
+Bluetooth was enabled on the iPhone SE 2.
+The "raised button” for enabling Bluetooth pairing on the UE Boom 2 device was clicked as per the test case instructions.
+In the iPhone Bluetooth settings, the "Connect" option for the UE Boom 2 device was selected.
+The iPhone SE 2 successfully established a Bluetooth connection with the UE Boom 2 device.
+Audio was played from the iPhone SE 2 to the UE Boom 2 speaker to test connectivity.
+The audio played successfully on the UE Boom 2 speaker, confirming successful Bluetooth pairing and connectivity.
+
+The audio playback from the iPhone SE 2 to the UE Boom 2 speaker was seamless and uninterrupted.
+
+
+Conclusion:
+The test case for Bluetooth pairing with the UE Boom 2 device using the iPhone SE 2 was executed successfully.
+The UE Boom 2 speaker successfully paired with the iPhone SE 2, and audio playback was tested and confirmed.
+
+
+Test Case Name: Volume control test
+Test Case ID: T03
+Tested Device: UE Boom 2 | speaker v2.4.7
+Testing Device: iPhone SE 2 | v17.2.1
+Mobile App: UE | BOOM | v7.15.146
+Test Date: 21/02/2024
+
+
+Test Results:
+Execution Status: PASS
+
+Observations:
+
+The UE Boom 2 speaker was turned on and connected to the iPhone via Bluetooth.
+Audio was played from the connected iPhone to test volume control functionality.
+The volume control slider in the UE Boom app was used to adjust the volume up and down.
+The volume control buttons on the UE Boom 2 speaker (+ and -) were pressed to increase and decrease the volume.
+The volume changes were observed and verified both on the iPhone and the UE Boom 2 speaker.
+
+Test Execution Notes:
+The volume control functions worked smoothly without any delays or errors.
+The volume adjustments were reflected accurately on both the iPhone and the UE Boom 2 speaker.
+The speaker responded promptly to volume control commands from both the app and physical buttons.
+
+
+
+Conclusion:
+The test case for volume control functionality on the UE Boom 2 speaker was executed successfully.
+The volume control functions worked as expected, allowing users to adjust the volume conveniently from both the app and physical buttons.
+
+
+
+
+Test Case Name: Custom function of buttons on the UE BOOM 2 device 
+	(*see UE BOOM documentation pg. 1)
+Test Case ID: T04
+Tested Device: UE Boom 2 | speaker v2.4.7
+Testing Device: iPhone SE 2 | v17.2.1
+Mobile App: UE | BOOM | v7.15.146
+Test Date: 21/02/2024
+
+
+Test Results:
+Execution Status: PASS
+
+Observations:
+
+The UE Boom 2 speaker was turned on and connected to a device, with audio playing through the speaker.
+Different combinations of button functionality were tested as follows:
+Pressing the (+) and (-) buttons simultaneously.
+Double-clicking the Bluetooth connectivity button.
+Holding the speaker in hand and double-tapping the top to skip a song from the currently playing playlist.
+Holding the speaker in hand and single-tapping to pause/unpause the current audio.
+The speaker  responded to each combination of button functionality.
+
+Test Execution Notes:
+The custom function of buttons on the UE BOOM 2 device worked but not every function worked as expected.
+
+Defects Identified: ID BUG01
+Double TAP function is not consistent. The speaker  does not recognise when it is a single and a double tap on some occasions.
+ Double tapping while PAUSE is enabled skips to the next audio on the list  or continues playing current audio. 
+According to documentation (see pg. 5) of the UE BOOM 2 speaker, double tap suppose to only skip audio to next on the list.
+Severity: Low
+
+Conclusion:
+
+The test case for verifying different combinations of button functionality on the UE BOOM 2 device was executed successfully.
+Most of custom functions of buttons on the speaker worked as designed, allowing users to perform various actions conveniently.
+
+
+
+
+Test Case Name: Near Field Communication (NFC) enabled pairing with iPhone SE 2
+	(*see UE BOOM documentation pg. 7)
+Test Case ID: T05
+Tested Device: UE Boom 2 | speaker v2.4.7
+Testing Device: iPhone SE 2 | v17.2.1
+Mobile App: UE | BOOM | v7.15.146
+Test Date: 21/02/2024
+
+
+Test Results:
+Execution Status: FAIL
+
+Observations:
+The test was conducted as per the test case instructions.
+The iPhone SE 2 had Bluetooth enabled.
+The UE Boom 2 speaker was turned on and not connected to a device.
+The iPhone SE 2 was placed next to the (+)(-) buttons of the speaker for NFC pairing.
+After 3 seconds, the iPhone SE 2 did not automatically connect to the speaker via Bluetooth.
+Attempted troubleshooting steps:
+Forgetting the device via settings did not fix the issue.
+Turning both devices off and on did not resolve the issue.
+Resetting settings on both devices did not resolve the issue.
+The issue persisted when attempting NFC pairing with another phone (Samsung S8).
+Test Execution Notes:
+NFC enabled pairing with the iPhone SE 2 and the UE Boom 2 speaker failed to establish a Bluetooth connection.
+Multiple troubleshooting steps were attempted, but the issue persisted across different devices.
+
+Defects Identified:
+Defect ID: DEF01
+NFC pairing with iPhone SE 2 and other devices fails to establish Bluetooth connection with UE Boom 2 speaker.
+Severity: High
+
+Conclusion:
+The test case for NFC enabled pairing with the iPhone SE 2 and the UE Boom 2 speaker failed to establish a Bluetooth connection.
+The issue appears to be related to the UE Boom 2 speaker's NFC functionality.
+
+
+
+
+Test Case Name: Alarm function of the app and UE BOOM 2 device
+Test Case ID: T06
+Tested Device: UE Boom 2 | speaker v2.4.7
+Testing Device: iPhone SE 2 | v17.2.1
+Mobile App: UE | BOOM | v7.15.146
+Test Date: 21/02/2024
+
+
+Test Results:
+Execution Status: FAIL
+
+Observations:
+The test was conducted as per the test case instructions.
+Detailed observations during the test execution:
+The iPhone was connected to the UE Boom 2 speaker via Bluetooth.
+In the settings section of the app, the alarm was set to ON.
+An alarm was set for 11:11 AM, and "play last audio" was selected as the alarm sound.
+When the alarm triggered at 11:11 AM, it failed to play any audio.
+The last played audio file was made unavailable (Deleted), which caused the alarm to malfunction and fail to perform.
+
+Test Execution Notes:
+The alarm function of the app and UE BOOM 2 device failed to perform as expected.
+Bug identified: If the last played audio file is made unavailable, the alarm does not function and fails to play any audio.
+
+Defects Identified:
+Defect ID: BUG03
+Defect Description: If the last played audio file is made unavailable, the Alarm does not function and fails to play any audio.
+Severity: Medium
+
+
+Conclusion:
+The test case for the alarm function of the app and UE BOOM 2 device failed due to the identified bug.
+The issue needs to be addressed to ensure the proper functionality of the alarm feature.
+
